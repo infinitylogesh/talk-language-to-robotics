@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0 lerobot-train \
+  --policy.path=lerobot/pi0 \
+  --dataset.repo_id=repo_id/ds_name \
+  --batch_size=16 \
+  --steps=20000 \
+  --save_freq=5000 \
+  --output_dir=outputs/train/grab_toy_car_2_cam_pi0 \
+  --job_name=grab_toy_car_2_cam_pi0 \
+  --policy.device=cuda \
+  --policy.repo_id=grab_toy_car_pi0 \
+  --wandb.enable=true \
+  --policy.push_to_hub=true

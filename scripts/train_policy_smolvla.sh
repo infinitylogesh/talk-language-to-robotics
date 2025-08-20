@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0 lerobot-train \
+  --policy.path=lerobot/smolvla_base \
+  --dataset.repo_id=repo_id/ds_name \
+  --batch_size=128 \
+  --steps=20000 \
+  --save_freq=10000 \
+  --output_dir=outputs/train/grab_toy_car_2_cam_smolvla \
+  --job_name=grab_toy_car_2_cam_smolvla \
+  --policy.device=cuda \
+  --policy.repo_id=repo_id \
+  --wandb.enable=true \
+  --policy.push_to_hub=true

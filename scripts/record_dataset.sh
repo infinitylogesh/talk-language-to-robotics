@@ -1,0 +1,14 @@
+python -m lerobot.record \
+    --robot.type=so100_follower \
+    --robot.port=/dev/tty.usbmodem58FA0958621 \
+    --robot.id=my_follower \
+    --robot.calibration_dir="/Users/logesh/garage/self/lerobot/calibration" \
+    --robot.cameras="{ wrist: {type: opencv, index_or_path: 0, width: 1920, height: 1080, fps: 30},top: {type: opencv, index_or_path: 1, width: 1920, height: 1080, fps: 30}}" \
+    --teleop.type=so100_leader \
+    --teleop.port=/dev/tty.usbmodem59591125071 \
+    --teleop.id=my_leader \
+    --display_data=true \
+    --dataset.repo_id=repo_id/eval_ds_name \
+    --dataset.num_episodes=30 \
+    --dataset.push_to_hub=False \
+    --dataset.single_task="Grab the yellow car"
