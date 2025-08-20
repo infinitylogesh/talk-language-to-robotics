@@ -1,1 +1,1 @@
-## Slides and Code of my talk: From Language to Robotics.
+## Slides and Code for my talk: From Language to Robotics.
